@@ -1,14 +1,14 @@
 const container = document.querySelector(".container");
 const rows = document.querySelectorAll(".row");
 
-// function randomColor() {
-//     let letters = "0123456789ABCDEF";
-//     let color = "#";
-//     for(let i = 0; i < 6; i++) {
-//         color += letters[Math.floor(Math.random() * 16)];
-//     }
-//     return color;
-// }
+function randomColor() {
+    let letters = "0123456789ABCDEF";
+    let color = "#";
+    for(let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
 function createGrid(numRow, numCell) {
     // create num of grid rows
@@ -22,7 +22,7 @@ function createGrid(numRow, numCell) {
             row.appendChild(cell).classList.add("cell");
 
             cell.addEventListener('mouseover', () => {
-                cell.style.backgroundColor = "#557C55";
+                cell.style.backgroundColor = randomColor();
             });
         }
     }
